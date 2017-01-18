@@ -19,8 +19,11 @@ defmodule CallMeWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", CallMeWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", CallMeWeb, as: :api do
+    pipe_through :api
+
+    scope "/v1", V1, as: :v1 do
+      resources "/event", EventController, except: [:new, :edit]
+    end
+  end
 end
