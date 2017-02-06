@@ -23,7 +23,7 @@ defmodule CallMeWeb.Mixfile do
   def application do
     [mod: {CallMeWeb, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :ex_aws, :hackney, :poison]]
   end
 
   # Specifies which paths to compile per environment.

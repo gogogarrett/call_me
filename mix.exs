@@ -23,6 +23,9 @@ defmodule CallMe.Mixfile do
   defp deps do
     [
       {:amqp, "0.1.4"},
+      {:ex_aws, "~> 1.0"},
+      {:poison, "~> 2.0"},
+      {:hackney, "~> 1.6"},
     ]
   end
 end
